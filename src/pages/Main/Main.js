@@ -3,6 +3,7 @@ import Form from '../../components'
 import ContainerFilms from '../../components/ContainerFilms'
 import Footer from '../../components/Footer'
 import ModalWindow from '../../components/modalWindow'
+import { connect } from 'react-redux'
 
 class Main extends React.Component {
     render(){
