@@ -1,9 +1,10 @@
 import React from 'react'
 
-const ContainerFilms = () => {
+const ContainerFilms = props => {
+    // console.log(props.inputValue)
     return(
         <div>
-            ContainerFilms
+           ContainerFilms
         </div>
     )
 }

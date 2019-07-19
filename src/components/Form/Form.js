@@ -1,12 +1,12 @@
 import React from 'react'
 import { Input, BtnSearch, BtnsSearchBy } from './componentsFrom'
 
-const Form = () => {
+const Form = props => {
     const handleOfSubmit = e => e.preventDefault();
-    
+    //console.log('props:', props)
     return (
         <form onSubmit={handleOfSubmit}>
-            <Input />
+            <Input getInpVal={props.getInputValue}/>
             <BtnsSearchBy />
             <BtnSearch />
         </form>

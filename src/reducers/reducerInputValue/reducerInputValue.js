@@ -1,13 +1,15 @@
 import {SET_INPUT_VALUE} from '../../constants/constReducers'
 
-const initialState = []
+const initialState = {
+    value: ''
+}
 
 function reducerInputValue(state = initialState, action){
     if(action.type === SET_INPUT_VALUE){
-        return [
+        return {
             ...state,
-            action.payload
-        ]
+            value: action.payload
+        }
     } else {
         return state
     }
