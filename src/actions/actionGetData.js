@@ -1,8 +1,8 @@
-import {SET_INPUT_VALUE} from '../constants/constReducers';
+import {GET_DATA} from '../constants/constReducers';
 
 function actionGetData() {
     return {
-      type: SET_INPUT_VALUE
+      type: GET_DATA
     };
   }
 

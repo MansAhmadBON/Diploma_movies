@@ -8,9 +8,3 @@ export default combineReducers({
     dataFilms,
     error
 })
-
-// const rootReducer = combineReducers({
-//     reducerInputValue
-// })
-
-// export default rootReducer
