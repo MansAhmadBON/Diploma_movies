@@ -4,7 +4,7 @@ import Main from './pages/Main'
 import { Provider } from 'react-redux'
 import store from './store'
 
-console.log(store.getState())
+// console.log(store.getState())
 
 store.subscribe(() => console.log(store.getState()))
 
