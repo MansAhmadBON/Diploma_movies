@@ -1,8 +1,6 @@
 import {FETCH_ERROR} from '../../constants/constReducers'
 
-const initialState = {
-    error: ''
-}
+const initialState = ''
 
 function reducerFetchError(state=initialState, action){
     if(action.type === FETCH_ERROR){

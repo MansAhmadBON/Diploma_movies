@@ -1,15 +1,10 @@
 import {FETCH_SUCCESS} from '../../constants/constReducers'; 
 
-const initialState = {
-    data: []
-}
+const initialState = []
 
 function reducerFetchMovies (state = initialState, action){
     if(action.type === FETCH_SUCCESS){
-        return {
-            ...state,
-            data: action.payload
-        }
+        return action.payload
     } else {
         return state
     }

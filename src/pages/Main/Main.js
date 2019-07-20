@@ -8,11 +8,11 @@ import actionInputValue from '../../actions/actionInputValue'
 import actionGetData from '../../actions/actionGetData'
 
 class Main extends React.Component {
-
+    
     componentDidMount = () => this.props.getMovisDataFromAPI();
 
     render(){
-        //console.log(this.props.inputValue.value)
+        console.log(this.props)
         return (
             <main>
                 <Form getInputValue={this.props.getInputValue}/>

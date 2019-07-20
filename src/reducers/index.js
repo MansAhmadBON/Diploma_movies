@@ -1,11 +1,11 @@
 import {combineReducers} from 'redux'
 import inputValue from './reducerInputValue'
-import data from './reducerFetchMovies'
+import dataFilms from './reducerFetchMovies'
 import error from './reducerFetchError'
 
 export default combineReducers({
     inputValue,
-    data,
+    dataFilms,
     error
 })
 
