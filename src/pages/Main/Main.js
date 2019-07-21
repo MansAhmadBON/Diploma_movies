@@ -12,11 +12,14 @@ class Main extends React.Component {
     componentDidMount = () => this.props.getMovisDataFromAPI();
 
     render(){
-        console.log(this.props)
+        //console.log(this.props.inputValue)
         return (
             <main>
                 <Form getInputValue={this.props.getInputValue}/>
-                <ContainerFilms />
+                <ContainerFilms 
+                    dataFilms={this.props.dataFilms} 
+                    inputValue={this.props.inputValue}
+                />
                 <Footer />
                 <ModalWindow />
             </main>
@@ -26,7 +29,8 @@ class Main extends React.Component {
 
 const mapStateToProps = props => {
     return {
-        inputValue: props.inputValue
+        inputValue: props.inputValue.value,
+        dataFilms: props.dataFilms.data
     }
 }
 
