@@ -9,13 +9,14 @@ import actionGetData from '../../actions/actionGetData'
 
 class Main extends React.Component {
     
-    componentDidMount = () => this.props.getMovisDataFromAPI();
-
     render(){
         //console.log(this.props.inputValue)
         return (
             <main>
-                <Form getInputValue={this.props.getInputValue}/>
+                <Form 
+                    getInputValue={this.props.getInputValue}
+                    getMovisData={this.props.getMovisDataFromAPI}
+                />
                 <ContainerFilms 
                     dataFilms={this.props.dataFilms} 
                     inputValue={this.props.inputValue}

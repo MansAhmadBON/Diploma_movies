@@ -1,5 +1,5 @@
 import React from 'react'
 
-const BtnSearch = () => <button>SEARCH</button>
+const BtnSearch = props => <button onClick={props.getMovis}>SEARCH</button>
 
 export default BtnSearch
