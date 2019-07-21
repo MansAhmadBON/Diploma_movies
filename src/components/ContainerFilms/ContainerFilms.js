@@ -2,7 +2,7 @@ import React from 'react'
 import {Baner, TitleMovie, Ganre, ReleaseDate} from './components'
 
 const ContainerFilms = props => {
-    if(props.dataFilms){
+    if(props.dataFilms && props.inputValue !== ''){
 
         const filteredFilms = props.dataFilms.filter( item => {
             return item.title.includes(props.inputValue) 
