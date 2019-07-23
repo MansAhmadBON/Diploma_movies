@@ -5,7 +5,13 @@ const ContainerFilms = props => {
     if(props.dataFilms && props.inputValue !== ''){
 
         const filteredFilms = props.dataFilms.filter( item => {
-            return item.title.includes(props.inputValue) 
+            if(props.searchBy === 'title'){
+                return item.title.includes(props.inputValue) 
+            } else if(props.searchBy === 'ganre'){
+                return item.genres.includes(props.inputValue) 
+            } else {
+                return item.title.includes(props.inputValue) 
+            }
         })
 
         return filteredFilms.map((item, i) => {

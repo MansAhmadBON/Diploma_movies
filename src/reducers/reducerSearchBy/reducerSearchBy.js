@@ -1,7 +1,7 @@
 import {SEARCH_BY_GANRE, SEARCH_BY_TITLE} from '../../constants/constReducers'
 
 const initialState = {
-    searchBy: 'test'
+    searchBy: 'title'
 }
 
 const reducerSearchBy = (state = initialState, action) =>{
