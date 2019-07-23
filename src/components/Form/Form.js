@@ -7,7 +7,10 @@ const Form = props => {
     return (
         <form onSubmit={handleOfSubmit}>
             <Input getInpVal={props.getInputValue}/>
-            <BtnsSearchBy />
+            <BtnsSearchBy 
+                searchByGanre={props.searchByGanre}
+                searchByTitle={props.searchByTitle}
+            />
             <BtnSearch getMovis={props.getMovisData}/>
         </form>
     )
