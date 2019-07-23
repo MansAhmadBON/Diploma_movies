@@ -14,7 +14,7 @@ import actionSearchByGanre from '../../actions/actionSearchByGanre'
 class Main extends React.Component {
     
     render(){
-        //console.log(this.props.seachByGanre)
+        console.log(this.props.searchBy)
         return (
             <main>
                 <Form 
@@ -26,6 +26,7 @@ class Main extends React.Component {
                 <ContainerFilms 
                     dataFilms={this.props.dataFilms} 
                     inputValue={this.props.inputValue}
+                    searchBy={this.props.searchBy}
                 />
                 <Footer />
                 <ModalWindow />
