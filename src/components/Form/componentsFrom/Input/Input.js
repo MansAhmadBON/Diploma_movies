@@ -1,15 +1,9 @@
 import React from 'react'
 
 class Input extends React.Component {
-    constructor(props){
-        super(props)
-        console.log(props)
-        // this.inputVal.bind(this)
-    }
 
     inputVal(){
         if(this.film){
-            console.log(this.film)
             this.props.getInpVal(this.film.value)
         } else {
             return ''

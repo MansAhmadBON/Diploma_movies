@@ -1,6 +1,12 @@
 import React from 'react'
 
-const ModalWindow = () => {
+const ModalWindow = props => {
+    const dataTarget = props.dataFilms.filter(item => {
+        return (item.title === props.targetFilm) ? item : null
+    })
+
+    console.log(dataTarget) 
+    
     return (
         <div>
             <h2>Tittle</h2>

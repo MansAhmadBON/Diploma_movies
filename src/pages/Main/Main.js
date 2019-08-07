@@ -8,13 +8,13 @@ import actionInputValue from '../../actions/actionInputValue'
 import actionGetData from '../../actions/actionGetData'
 import actionSearchByTitle from '../../actions/actionSearchByTitle'
 import actionSearchByGanre from '../../actions/actionSearchByGanre'
-
+import actionTargetFlim from '../../actions/actionTargetFlim'
 
 
 class Main extends React.Component {
-    
+
     render(){
-        console.log(this.props.searchBy)
+
         return (
             <main>
                 <Form 
@@ -27,9 +27,13 @@ class Main extends React.Component {
                     dataFilms={this.props.dataFilms} 
                     inputValue={this.props.inputValue}
                     searchBy={this.props.searchBy}
+                    getTargetFilm={this.props.getTargetFilm}
                 />
                 <Footer />
-                <ModalWindow />
+                <ModalWindow 
+                    dataFilms={this.props.dataFilms}
+                    targetFilm={this.props.targetFilm}
+                />
             </main>
         )
     }
@@ -39,7 +43,8 @@ const mapStateToProps = props => {
     return {
         inputValue: props.inputValue.value,
         dataFilms: props.dataFilms.data,
-        searchBy: props.searchFilmsBy.searchBy
+        searchBy: props.searchFilmsBy.searchBy,
+        targetFilm: props.targetFilm.target
     }
 }
 
@@ -49,6 +54,7 @@ const mapDispatchToProps = dispatch => {
         getMovisDataFromAPI: () => dispatch(actionGetData()),
         searchByGanre: () => dispatch(actionSearchByGanre()),
         searchByTitle: () => dispatch(actionSearchByTitle()),
+        getTargetFilm: (target) => dispatch(actionTargetFlim(target))
     }
 }
 export default connect(
