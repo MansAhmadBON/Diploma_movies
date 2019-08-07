@@ -3,12 +3,14 @@ import inputValue from './reducerInputValue'
 import dataFilms from './reducerFetchMovies'
 import error from './reducerFetchError'
 import searchFilmsBy from './reducerSearchBy'
+import targetFilm from './reducerTargetFilm'
 
 export default combineReducers({
     inputValue,
     searchFilmsBy,
     dataFilms,
-    error
+    error,
+    targetFilm
 })
 
 // const rootReducer = combineReducers({

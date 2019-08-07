@@ -17,7 +17,7 @@ const ContainerFilms = props => {
         return filteredFilms.map((item, i) => {
             return (
                 <div key={i}>
-                    <Baner src={item.poster_path} alt={item.title}/>
+                    <Baner src={item.poster_path} alt={item.title} targetFilm={props.getTargetFilm}/>
                     <TitleMovie title={item.title}/>
                     <Ganre ganre={item.genres}/>
                     <ReleaseDate date={item.release_date}/>
