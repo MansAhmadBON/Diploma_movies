@@ -9,10 +9,6 @@ export default combineReducers({
     inputValue,
     searchFilmsBy,
     dataFilms,
-<<<<<<< HEAD
-    error
-})
-=======
     error,
     targetFilm
 })
@@ -22,4 +18,3 @@ export default combineReducers({
 // })
 
 // export default rootReducer
->>>>>>> dev
