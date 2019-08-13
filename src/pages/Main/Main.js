@@ -14,7 +14,7 @@ import actionTargetFlim from '../../actions/actionTargetFlim'
 class Main extends React.Component {
 
     render(){
-
+        //console.log(this.props.targetFilm)
         return (
             <main>
                 <Form 
@@ -23,14 +23,14 @@ class Main extends React.Component {
                     searchByGanre={this.props.searchByGanre}
                     searchByTitle={this.props.searchByTitle}
                 />
-                <ContainerFilms 
+                <ContainerFilms  //ТУТ РАБОТАЕТ this.props.dataFilms
                     dataFilms={this.props.dataFilms} 
                     inputValue={this.props.inputValue}
                     searchBy={this.props.searchBy}
                     getTargetFilm={this.props.getTargetFilm}
                 />
                 <Footer />
-                <ModalWindow 
+                <ModalWindow //ТУТ НЕ РАБОТАЕТ this.props.dataFilms
                     dataFilms={this.props.dataFilms}
                     targetFilm={this.props.targetFilm}
                 />
