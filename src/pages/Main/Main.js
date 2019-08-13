@@ -1,5 +1,6 @@
 import React from "react";
 import Form from '../../components'
+import ContainerCounterAndSoet from '../../components/containerCounterAndSort'
 import ContainerFilms from '../../components/ContainerFilms'
 import Footer from '../../components/Footer'
 import ModalWindow from '../../components/modalWindow'
@@ -9,7 +10,6 @@ import actionGetData from '../../actions/actionGetData'
 import actionSearchByTitle from '../../actions/actionSearchByTitle'
 import actionSearchByGanre from '../../actions/actionSearchByGanre'
 import actionTargetFlim from '../../actions/actionTargetFlim'
-
 
 class Main extends React.Component {
 
@@ -35,6 +35,7 @@ class Main extends React.Component {
                         searchByTitle={this.props.searchByTitle}
                     />
                     <main>
+                        <ContainerCounterAndSoet />
                         <ContainerFilms 
                             dataFilms={filteredFilms}
                             getTargetFilm={this.props.getTargetFilm}
