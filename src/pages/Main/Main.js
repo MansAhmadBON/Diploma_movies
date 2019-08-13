@@ -14,7 +14,7 @@ import actionTargetFlim from '../../actions/actionTargetFlim'
 class Main extends React.Component {
 
     render(){
-        console.log(this.props.dataFilms)
+        //console.log(this.props.dataFilms)
         if(this.props.dataFilms && this.props.inputValue !== ''){
             const filteredFilms = this.props.dataFilms.filter( item => {
                 if(this.props.searchBy === 'title'){
@@ -25,7 +25,6 @@ class Main extends React.Component {
                     return item.title.includes(this.props.inputValue) 
                 }
             })
-            
             return (
                 <div>
                     <Form 
@@ -47,7 +46,6 @@ class Main extends React.Component {
                     />
                 </div>
             )
-
         } else {
             return (
                 <div>
@@ -86,23 +84,3 @@ export default connect(
     mapStateToProps,
     mapDispatchToProps
 )(Main)
-
-{/* <main>
-                <Form 
-                    getInputValue={this.props.getInputValue}
-                    getMovisData={this.props.getMovisDataFromAPI}
-                    searchByGanre={this.props.searchByGanre}
-                    searchByTitle={this.props.searchByTitle}
-                />
-                <ContainerFilms  //ТУТ РАБОТАЕТ this.props.dataFilms
-                    dataFilms={this.props.dataFilms} 
-                    inputValue={this.props.inputValue}
-                    searchBy={this.props.searchBy}
-                    getTargetFilm={this.props.getTargetFilm}
-                />
-                <Footer />
-                <ModalWindow //ТУТ НЕ РАБОТАЕТ this.props.dataFilms
-                    dataFilms={this.props.dataFilms}
-                    targetFilm={this.props.targetFilm}
-                />
-            </main> */}
