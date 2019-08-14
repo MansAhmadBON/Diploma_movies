@@ -1,6 +1,6 @@
 import React from "react";
 import Form from '../../components'
-import ContainerCounterAndSoet from '../../components/containerCounterAndSort'
+import ContainerCounterAndSort from '../../components/containerCounterAndSort'
 import ContainerFilms from '../../components/ContainerFilms'
 import Footer from '../../components/Footer'
 import ModalWindow from '../../components/modalWindow'
@@ -34,7 +34,7 @@ class Main extends React.Component {
                         searchByTitle={this.props.searchByTitle}
                     />
                     <main>
-                        <ContainerCounterAndSoet />
+                        <ContainerCounterAndSort />
                         <ContainerFilms 
                             dataFilms={filteredFilms}
                             getTargetFilm={this.props.getTargetFilm}
