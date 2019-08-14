@@ -1,12 +1,17 @@
 import React from 'react'
 import Rating from './components/Rating'
 import Release from './components/Release'
-const SortBtns = () => {
+
+const SortBtns = props => {
     return (
         <div>
             Sort By
-            <Rating />
-            <Release />
+            <Rating 
+                sortByRating={props.sortByRating}
+            />
+            <Release 
+                sortByRelease={props.sortByRelease}
+            />
         </div>
     )
 }
