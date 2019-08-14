@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Release = () => {
+const Release = props => {
     return (
-        <button> Release </button>
+        <button onClick={props.sortByRelease}> Release </button>
     )
 }
 

@@ -11,3 +11,7 @@ export const SEARCH_BY_GANRE = 'SEARCH_BY_GANRE'
 export const SEARCH_BY_TITLE = 'SEARCH_BY_TITLE'
 
 export const TARGET_FILM = 'TARGET_FILM'
+
+export const RELEASE = 'RELEASE'
+
+export const RATING = 'RATING'

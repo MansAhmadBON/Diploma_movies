@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Rating = () => {
+const Rating = props => {
     return (
-        <button>Rating</button>
+        <button onClick={props.sortByRating}>Rating</button>
     )
 }
 

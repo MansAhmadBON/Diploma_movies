@@ -2,11 +2,14 @@ import React from 'react'
 import Counter from './components/Counter'
 import SortBtns from './components/SortBtns'
 
-const ContainerCounterAndSoet = () => {
+const ContainerCounterAndSoet = props => {
     return (
         <div>
             <Counter />
-            <SortBtns />
+            <SortBtns
+                sortByRating={props.sortByRating}
+                sortByRelease={props.sortByRelease}
+            />
         </div>
     )
 }
