@@ -28,6 +28,7 @@ class Main extends React.Component {
                     return item.title.includes(this.props.inputValue) 
                 }
             })
+            console.log(filteredFilms.length)
             return (
                 <div>
                     <Form 
@@ -40,6 +41,7 @@ class Main extends React.Component {
                         <ContainerCounterAndSort 
                             sortByRating={this.props.sortByRating}
                             sortByRelease={this.props.sortByRelease}
+                            dataForCounter={filteredFilms.length}
                         />
                         <ContainerFilms 
                             dataFilms={filteredFilms}

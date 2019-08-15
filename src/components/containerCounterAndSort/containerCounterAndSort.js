@@ -5,7 +5,7 @@ import SortBtns from './components/SortBtns'
 const ContainerCounterAndSoet = props => {
     return (
         <div>
-            <Counter />
+            <Counter data={props.dataForCounter}/>
             <SortBtns
                 sortByRating={props.sortByRating}
                 sortByRelease={props.sortByRelease}

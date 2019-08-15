@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Counter = () => {
+const Counter = props => {
     return (
         <div>
             <div>
-                 movies found
+                 {props.data} movies found
             </div>
         </div>
     )
