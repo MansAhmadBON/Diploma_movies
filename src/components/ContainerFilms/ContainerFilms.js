@@ -3,6 +3,27 @@ import {Baner, TitleMovie, Ganre, ReleaseDate} from './components'
 
 const ContainerFilms = props => {
     if(props.dataFilms){
+
+        const sortBy = () => {
+            if(props.sortBy === 'release'){
+                return props.dataFilms.sort((a,b) => {
+                    const x = +a.release_date.replace(/-/g, '')
+                    const y = +b.release_date.replace(/-/g, '')
+                    return (x < y) ? 1 : -1
+                })
+            } else if(props.sortBy === 'rating'){
+                return props.dataFilms.sort((a,b) => {
+                    const x = +a.vote_count
+                    const y = +b.vote_count
+                    return (x < y) ? 1 : -1
+                })
+            } else {
+                return null
+            }
+            
+        }
+        sortBy()
+
         return props.dataFilms.map((item, i) => {
             return (
                 <div key={i}>
@@ -13,12 +34,11 @@ const ContainerFilms = props => {
                 </div>
             )
         })
+
     } else {
         return null
     }
 }
 
 export default ContainerFilms
-
-
 

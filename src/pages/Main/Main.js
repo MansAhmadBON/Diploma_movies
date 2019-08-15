@@ -17,7 +17,7 @@ import actionSortByRelease from '../../actions/actionSortByRelease'
 class Main extends React.Component {
 
     render(){
-        console.log(this.props.sortBy)
+        //console.log(this.props.sortBy)
         if(this.props.dataFilms && this.props.inputValue !== ''){
             const filteredFilms = this.props.dataFilms.filter( item => {
                 if(this.props.searchBy === 'title'){
@@ -44,6 +44,7 @@ class Main extends React.Component {
                         <ContainerFilms 
                             dataFilms={filteredFilms}
                             getTargetFilm={this.props.getTargetFilm}
+                            sortBy={this.props.sortBy}
                         />
                     </main>
                     <Footer />
