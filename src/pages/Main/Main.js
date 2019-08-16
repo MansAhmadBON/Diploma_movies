@@ -12,12 +12,13 @@ import actionSearchByGanre from '../../actions/actionSearchByGanre'
 import actionTargetFlim from '../../actions/actionTargetFlim'
 import actionSortByRating from '../../actions/actionSortByRating'
 import actionSortByRelease from '../../actions/actionSortByRelease'
+import styles from './styles.module.css'
 
 
 class Main extends React.Component {
 
     render(){
-        //console.log(this.props.sortBy)
+        
         if(this.props.dataFilms && this.props.inputValue !== ''){
             const filteredFilms = this.props.dataFilms.filter( item => {
                 if(this.props.searchBy === 'title'){
@@ -28,14 +29,19 @@ class Main extends React.Component {
                     return item.title.includes(this.props.inputValue) 
                 }
             })
-            console.log(filteredFilms.length)
+            
+            const dataForModalWindow = this.props.dataFilms.filter(item => {
+                return (item.title === this.props.targetFilm) ? item : false 
+            })
+            const data = dataForModalWindow[0]
+
             return (
-                <div>
+                <div className={styles.header}>
                     <Form 
-                        getInputValue={this.props.getInputValue}
-                        getMovisData={this.props.getMovisDataFromAPI}
-                        searchByGanre={this.props.searchByGanre}
-                        searchByTitle={this.props.searchByTitle}
+                            getInputValue={this.props.getInputValue}
+                            getMovisData={this.props.getMovisDataFromAPI}
+                            searchByGanre={this.props.searchByGanre}
+                            searchByTitle={this.props.searchByTitle}
                     />
                     <main>
                         <ContainerCounterAndSort 
@@ -50,10 +56,7 @@ class Main extends React.Component {
                         />
                     </main>
                     <Footer />
-                    <ModalWindow
-                        dataFilms={this.props.dataFilms}
-                        targetFilm={this.props.targetFilm}
-                    />
+                    <ModalWindow data={data}/>
                 </div>
             )
         } else {

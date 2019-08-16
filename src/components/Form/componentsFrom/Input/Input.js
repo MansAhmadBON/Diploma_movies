@@ -1,4 +1,6 @@
 import React from 'react'
+import styles from './styles.module.css'
+
 
 class Input extends React.Component {
 
@@ -13,7 +15,10 @@ class Input extends React.Component {
     render(){
         this.inputVal()
         return(
-            <input ref={(input) => {this.film = input}}/>
+            <div className={styles.wrapper_inp}>
+                <label htmlFor="inpMain" className={styles.label}>FIND YOUR MOVIE</label>
+                <input className={styles.inp} ref={(input) => {this.film = input}} id="inpMain"/>
+            </div>
         )
     }
 }

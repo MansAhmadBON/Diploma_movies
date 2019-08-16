@@ -1,0 +1,19 @@
+.baner {
+    background-image: url(/static/media/movie-h.a4e1e681.jpg);
+    padding-top: 30px;
+}
+
+.title {
+    color: red;
+    width: 1000px;
+    margin: 0 auto;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.form {
+    padding-top: 60px;
+    width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}

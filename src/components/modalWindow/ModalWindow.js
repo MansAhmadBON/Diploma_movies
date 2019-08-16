@@ -1,28 +1,20 @@
 import React from 'react'
 
 const ModalWindow = props => {
-    if(props.dataFilms){
-        const dataForModalWindow = props.dataFilms.filter(item => {
-            return (item.title === props.targetFilm) ? item : false 
-        })
-        const data = dataForModalWindow[0]
-        if(data){
-            const {budget, title, genres, overview, poster, revenue} = data
-            return (
+    if(props.data){
+        const {budget, title, genres, overview, poster_path, revenue} = props.data
+        return (
+            <div>
+                <h2>{title}</h2>
+                <h3>{genres}</h3> 
+                <p>{overview}</p>
                 <div>
-                    <h2>{title}</h2>
-                    <h3>{genres}</h3> 
-                    <p>{overview}</p>
-                    <div>
-                        <span>{revenue}</span>
-                        <hr></hr>
-                        <span>{budget}</span>
-                    </div>
+                    <span>{revenue}</span>
+                    <hr></hr>
+                    <span>{budget}</span>
                 </div>
-            )
-        } else {
-            return null
-        }
+            </div>
+        )
     } else {
         return null
     }
