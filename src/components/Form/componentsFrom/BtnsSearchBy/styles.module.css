@@ -36,3 +36,7 @@
 .btns:hover {
     background: rgb(248, 58, 58);
 }
+
+.btns:focus {
+    background: rgb(240, 76, 76);
+}

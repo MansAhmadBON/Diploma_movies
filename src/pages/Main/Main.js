@@ -36,7 +36,6 @@ class Main extends React.Component {
             })
             const data = dataForModalWindow[0]
 
-            console.log(this.props.isOpen)
             return (
                 <div className={styles.header}>
                     <Form 
