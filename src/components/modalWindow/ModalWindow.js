@@ -11,7 +11,7 @@ const ModalWindow = props => {
         }
 
         return (
-            <div className={styles.modal_overlay}>
+            <div className={styles.modal_overlay} onDoubleClick={() => toCloseModal()}>
                 <div className={styles.modal_display}>
                     <div className={styles.modal_window}>
                         <div style={{backgroundImage: `url(${poster_path})`, backgroundSize: 'cover', height: '400px'}}>
@@ -24,12 +24,6 @@ const ModalWindow = props => {
                                 <div className={styles.container_revenue_budget}>
                                     <span className={styles.modal_revenue}>Popularity {revenue}</span>
                                     <span className={styles.modal_budget}>Budget {budget}</span>
-                                </div>
-                                <div className={styles.modal_container_btn}>
-                                    <button 
-                                        className={styles.modal_btn}
-                                        onClick={toCloseModal}
-                                    >X</button>
                                 </div>
                             </div>
                         </div>
