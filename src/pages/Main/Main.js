@@ -49,11 +49,13 @@ class Main extends React.Component {
                             sortByRelease={this.props.sortByRelease}
                             dataForCounter={filteredFilms.length}
                         />
-                        <ContainerFilms 
-                            dataFilms={filteredFilms}
-                            getTargetFilm={this.props.getTargetFilm}
-                            sortBy={this.props.sortBy}
-                        />
+                        <div className={styles.container_films}>
+                            <ContainerFilms 
+                                dataFilms={filteredFilms}
+                                getTargetFilm={this.props.getTargetFilm}
+                                sortBy={this.props.sortBy}
+                            />
+                        </div>
                     </main>
                     <Footer />
                     <ModalWindow data={data}/>

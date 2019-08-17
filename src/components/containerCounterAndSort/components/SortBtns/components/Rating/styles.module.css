@@ -1,0 +1,15 @@
+.btn_sort {
+    border: none;
+    background: transparent;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 40px;
+    font-size: 18px;
+}
+.btn_sort:hover {
+    color: rgb(131, 10, 10);
+}
+.btn_sort:active {
+    color: rgb(202, 32, 32);
+}

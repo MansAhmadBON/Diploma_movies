@@ -1,5 +1,6 @@
 import React from 'react'
 import {Baner, TitleMovie, Ganre, ReleaseDate} from './components'
+import styles from './styles.module.css'
 
 const ContainerFilms = props => {
     if(props.dataFilms){
@@ -26,11 +27,15 @@ const ContainerFilms = props => {
 
         return props.dataFilms.map((item, i) => {
             return (
-                <div key={i}>
+                <div key={i} className={styles.item_film}>
                     <Baner src={item.poster_path} alt={item.title} targetFilm={props.getTargetFilm}/>
-                    <TitleMovie title={item.title}/>
-                    <Ganre ganre={item.genres}/>
-                    <ReleaseDate date={item.release_date}/>
+                    <div className={styles.wrapper_title_release}>
+                        <TitleMovie title={item.title}/>
+                        <ReleaseDate date={item.release_date}/>
+                    </div>
+                    <div>
+                        <Ganre ganre={item.genres}/>
+                    </div>
                 </div>
             )
         })

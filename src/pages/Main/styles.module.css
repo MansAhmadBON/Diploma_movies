@@ -1,0 +1,8 @@
+.container_films {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-bottom: 60px;
+    justify-content: space-evenly;
+}

@@ -1,9 +1,10 @@
 import React from 'react'
+import styles from './styles.module.css'
 
 const Ganre = props => {
     return props.ganre.map((item, i) => {
         return (
-            <div key={i}>
+            <div className={styles.item_ganre} key={i}>
                 <span>{item}</span>
             </div>
         )

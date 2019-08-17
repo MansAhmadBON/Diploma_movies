@@ -1,0 +1,10 @@
+.item_film {
+    width: 350px;
+    margin-top: 50px;
+}
+
+.wrapper_title_release {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

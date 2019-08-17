@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from '../Rating/styles.module.css'
 
 const Release = props => {
     return (
-        <button onClick={props.sortByRelease}> Release </button>
+        <button className={styles.btn_sort} onClick={props.sortByRelease}>release </button>
     )
 }
 
