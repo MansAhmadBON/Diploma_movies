@@ -5,7 +5,7 @@ import error from './reducerFetchError'
 import searchFilmsBy from './reducerSearchBy'
 import targetFilm from './reducerTargetFilm'
 import sortBy from './reducerSortBy'
-
+import openModal from './reducerOpenModal'
 
 export default combineReducers({
     inputValue,
@@ -13,5 +13,6 @@ export default combineReducers({
     dataFilms,
     error,
     targetFilm,
-    sortBy
+    sortBy,
+    openModal
 })

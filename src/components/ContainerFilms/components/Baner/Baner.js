@@ -5,6 +5,7 @@ const Baner = props => {
     
     const targetMovie = e => {
         props.targetFilm(e.target.alt)
+        props.toOpenModal()
     }
 
     return (

@@ -12,13 +12,14 @@ import actionSearchByGanre from '../../actions/actionSearchByGanre'
 import actionTargetFlim from '../../actions/actionTargetFlim'
 import actionSortByRating from '../../actions/actionSortByRating'
 import actionSortByRelease from '../../actions/actionSortByRelease'
+import actionOpenModal from '../../actions/actionOpenModal'
+import actionToCloseModal from '../../actions/actionToCloseModal'
 import styles from './styles.module.css'
 
 
 class Main extends React.Component {
-
+ 
     render(){
-        
         if(this.props.dataFilms && this.props.inputValue !== ''){
             const filteredFilms = this.props.dataFilms.filter( item => {
                 if(this.props.searchBy === 'title'){
@@ -35,6 +36,7 @@ class Main extends React.Component {
             })
             const data = dataForModalWindow[0]
 
+            console.log(this.props.isOpen)
             return (
                 <div className={styles.header}>
                     <Form 
@@ -54,11 +56,17 @@ class Main extends React.Component {
                                 dataFilms={filteredFilms}
                                 getTargetFilm={this.props.getTargetFilm}
                                 sortBy={this.props.sortBy}
+                                toOpenModal={this.props.openModal}
                             />
                         </div>
                     </main>
                     <Footer />
-                    <ModalWindow data={data}/>
+                    {
+                        this.props.isOpen && <ModalWindow 
+                                                data={data}
+                                                toCloseModal={this.props.toCloseModal}
+                                             />
+                    }
                 </div>
             )
         } else {
@@ -86,7 +94,8 @@ const mapStateToProps = props => {
         dataFilms: props.dataFilms.data,
         searchBy: props.searchFilmsBy.searchBy,
         targetFilm: props.targetFilm.target,
-        sortBy: props.sortBy.sortBy
+        sortBy: props.sortBy.sortBy,
+        isOpen: props.openModal.isOpen
     }
 }
 
@@ -98,7 +107,9 @@ const mapDispatchToProps = dispatch => {
         searchByTitle: () => dispatch(actionSearchByTitle()),
         getTargetFilm: (target) => dispatch(actionTargetFlim(target)),
         sortByRating: () => dispatch(actionSortByRating()),
-        sortByRelease: () => dispatch(actionSortByRelease())
+        sortByRelease: () => dispatch(actionSortByRelease()),
+        openModal: () => dispatch(actionOpenModal()),
+        toCloseModal: () => dispatch(actionToCloseModal())
     }
 }
 export default connect(

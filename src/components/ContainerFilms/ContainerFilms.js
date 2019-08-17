@@ -28,7 +28,12 @@ const ContainerFilms = props => {
         return props.dataFilms.map((item, i) => {
             return (
                 <div key={i} className={styles.item_film}>
-                    <Baner src={item.poster_path} alt={item.title} targetFilm={props.getTargetFilm}/>
+                    <Baner 
+                        src={item.poster_path} 
+                        alt={item.title} 
+                        targetFilm={props.getTargetFilm}
+                        toOpenModal={props.toOpenModal}
+                    />
                     <div className={styles.wrapper_title_release}>
                         <TitleMovie title={item.title}/>
                         <ReleaseDate date={item.release_date}/>

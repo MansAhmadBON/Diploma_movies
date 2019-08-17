@@ -15,3 +15,7 @@ export const TARGET_FILM = 'TARGET_FILM'
 export const RELEASE = 'RELEASE'
 
 export const RATING = 'RATING'
+
+export const OPEN = 'OPEN'
+
+export const CLOSE = 'CLOSE'

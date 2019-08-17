@@ -4,7 +4,12 @@ import Ganre from './Ganre/Ganre'
 
 const ModalWindow = props => {
     if(props.data){
-        const {budget, title, genres, overview, poster_path, revenue} = props.data
+        const {budget, title, genres, overview, poster_path, revenue} = props.data;
+
+        const toCloseModal = () => {
+            props.toCloseModal()
+        }
+
         return (
             <div className={styles.modal_overlay}>
                 <div className={styles.modal_display}>
@@ -21,7 +26,10 @@ const ModalWindow = props => {
                                     <span className={styles.modal_budget}>Budget {budget}</span>
                                 </div>
                                 <div className={styles.modal_container_btn}>
-                                    <button className={styles.modal_btn}>X</button>
+                                    <button 
+                                        className={styles.modal_btn}
+                                        onClick={toCloseModal}
+                                    >X</button>
                                 </div>
                             </div>
                         </div>
