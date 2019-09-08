@@ -3,7 +3,7 @@
     height: 70px;
     background: #000;
     border: none;
-    border-bottom: 1px solid red;
+    border-bottom: 2px solid red;
     margin-top: 50px;
     margin-left: auto;
     color: #fff;
@@ -14,12 +14,10 @@
 }
 .inp:focus {
     color: #fff;
-    border-bottom: 2px solid red;
 }
 .inp:hover {
-    border-bottom: 2px solid red;
+    background: rgb(39, 39, 39);
 }
-
 .label {
     display: block;
     color: #fff;
