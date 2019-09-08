@@ -4,7 +4,6 @@ import styles from './styles.module.css'
 
 const Form = props => {
     const handleOfSubmit = e => e.preventDefault();
-    //console.log('props:', props)
     return (
         <div>
             <header className={styles.baner}>

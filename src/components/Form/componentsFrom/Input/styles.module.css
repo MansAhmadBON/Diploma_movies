@@ -3,12 +3,21 @@
     height: 70px;
     background: #000;
     border: none;
-    border-bottom: 2px solid red;
+    border-bottom: 1px solid red;
     margin-top: 50px;
     margin-left: auto;
     color: #fff;
     font-size: 20px;
     padding-left: 30px;
+    transition: all .2s ease-in-out;
+    outline: none;
+}
+.inp:focus {
+    color: #fff;
+    border-bottom: 2px solid red;
+}
+.inp:hover {
+    border-bottom: 2px solid red;
 }
 
 .label {

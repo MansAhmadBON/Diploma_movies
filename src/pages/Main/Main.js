@@ -36,9 +36,8 @@ class Main extends React.Component {
             })
             const data = dataForModalWindow[0]
 
-            console.log(this.props.isOpen)
             return (
-                <div className={styles.header}>
+                <div>
                     <Form 
                             getInputValue={this.props.getInputValue}
                             getMovisData={this.props.getMovisDataFromAPI}
@@ -51,21 +50,23 @@ class Main extends React.Component {
                             sortByRelease={this.props.sortByRelease}
                             dataForCounter={filteredFilms.length}
                         />
-                        <div className={styles.container_films}>
-                            <ContainerFilms 
-                                dataFilms={filteredFilms}
-                                getTargetFilm={this.props.getTargetFilm}
-                                sortBy={this.props.sortBy}
-                                toOpenModal={this.props.openModal}
-                            />
-                        </div>
+                        {
+                            filteredFilms[0] && <div className={styles.container_films}>
+                                                    <ContainerFilms 
+                                                        dataFilms={filteredFilms}
+                                                        getTargetFilm={this.props.getTargetFilm}
+                                                        sortBy={this.props.sortBy}
+                                                        toOpenModal={this.props.openModal}
+                                                    />
+                                                </div>
+                        }
                     </main>
                     <Footer />
                     {
-                        this.props.isOpen && <ModalWindow 
-                                                data={data}
-                                                toCloseModal={this.props.toCloseModal}
-                                             />
+                        this.props.isOpen && data && <ModalWindow 
+                                                        data={data}
+                                                        toCloseModal={this.props.toCloseModal}
+                                                    />
                     }
                 </div>
             )
