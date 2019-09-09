@@ -1,8 +1,8 @@
-import  { FETCH_ERROR } from '../constants/constReducers'
+import  { FILMS_FETCH_ERROR } from '../constants/constReducers'
 
 const actionFetchError = error => {
     return {
-        type: FETCH_ERROR,
+        type: FILMS_FETCH_ERROR,
         payload: error
     }
 }

@@ -1,9 +1,9 @@
-import {FETCH_ERROR} from '../../constants/constReducers'
+import {FILMS_FETCH_ERROR} from '../../constants/constReducers'
 
 const initialState = ''
 
 function reducerFetchError(state=initialState, action){
-    if(action.type === FETCH_ERROR){
+    if(action.type === FILMS_FETCH_ERROR){
         return {
             ...state,
             error: action.payload

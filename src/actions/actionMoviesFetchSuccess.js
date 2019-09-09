@@ -1,8 +1,8 @@
-import {FETCH_SUCCESS} from '../constants/constReducers'
+import {FILMS_FETCH_SUCCESS} from '../constants/constReducers'
 
 const actionFetchSuccess = data => {
     return {
-        type: FETCH_SUCCESS,
+        type: FILMS_FETCH_SUCCESS,
         payload: data
     }
 }
