@@ -6,13 +6,13 @@ const ContainerFilms = props => {
     const sortedFilms = [...props.dataFilms];
     const sortBy = () => {
         if(props.sortBy === 'release'){
-            return sortedFilms.sort((a,b) => {
+            sortedFilms.sort((a,b) => {
                 const x = +a.release_date.replace(/-/g, '')
                 const y = +b.release_date.replace(/-/g, '')
                 return (x < y) ? 1 : -1
             })
         } else if(props.sortBy === 'rating'){
-            return sortedFilms.sort((a,b) => {
+            sortedFilms.sort((a,b) => {
                 const x = +a.vote_count
                 const y = +b.vote_count
                 return (x < y) ? 1 : -1
@@ -23,7 +23,7 @@ const ContainerFilms = props => {
         
     }
     sortBy()
-    return sortedFilms.map((item, i) => {
+    return sortedFilms.map(item => {
         return (
             <div key={item.id} className={styles.item_film}>
                 <Baner 

@@ -18,7 +18,6 @@ import styles from './styles.module.css'
 
 
 class Main extends React.Component {
- 
     render(){
         if(this.props.dataFilms && this.props.inputValue !== ''){
             const filteredFilms = this.props.dataFilms.filter( item => {

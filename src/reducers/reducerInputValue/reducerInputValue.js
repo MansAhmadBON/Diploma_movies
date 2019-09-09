@@ -5,7 +5,6 @@ const initialState = {
 }
 
 function reducerInputValue(state = initialState, action){
-    //console.log(action)
     if(action.type === SET_INPUT_VALUE){
         return {
             ...state,

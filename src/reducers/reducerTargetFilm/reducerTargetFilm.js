@@ -5,7 +5,6 @@ const initialState = {
 }
 
 function reducerTargetFilm(state = initialState, action){
-    //console.log(action)
     if(action.type === TARGET_FILM){
         return {
             ...state,
