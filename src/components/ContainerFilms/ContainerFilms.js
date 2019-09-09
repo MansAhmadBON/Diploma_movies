@@ -24,7 +24,7 @@ const ContainerFilms = props => {
     sortBy()
     return props.dataFilms.map((item, i) => {
         return (
-            <div key={i} className={styles.item_film}>
+            <div key={item.id} className={styles.item_film}>
                 <Baner 
                     src={item.poster_path} 
                     alt={item.title} 
