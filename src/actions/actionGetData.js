@@ -1,8 +1,8 @@
-import {GET_DATA} from '../constants/constReducers';
+import {FILMS_GET_DATA} from '../constants/constReducers';
 
 function actionGetData() {
     return {
-      type: GET_DATA
+      type: FILMS_GET_DATA
     };
   }
 

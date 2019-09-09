@@ -1,6 +1,6 @@
 export const SET_INPUT_VALUE = 'SET_INPUT_VALUE';
 
-export const GET_DATA = "GET_DATA";
+export const FILMS_GET_DATA = "FILMS_GET_DATA";
 
 export const FETCH_SUCCESS = 'FETCH_SUCCESS';
 

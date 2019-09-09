@@ -1,10 +1,9 @@
-import {GET_DATA} from '../constants/constReducers';
+import {FILMS_GET_DATA} from '../constants/constReducers';
 import actionFetchSuccess from '../actions/actionMoviesFetchSuccess';
 import actionFetchError from '../actions/actionMoviesFetchError';
 
 export const fetchDataMiddleware = state => next => async action => {
-    //console.log(action)
-    if(action.type === GET_DATA){
+    if(action.type === FILMS_GET_DATA){
         try {
             const a = await fetch(
               `https://reactjs-cdp.herokuapp.com/movies`
